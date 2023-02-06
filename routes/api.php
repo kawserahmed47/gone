@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ChildCategoryController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubcategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('category',CategoryController::class);
 Route::resource('subcategory',SubcategoryController::class);
 Route::resource('child-category', ChildCategoryController::class);
+Route::resource('product', ProductController::class);
 
 Route::post('login', [LoginController::class, 'login']);
 Route::post('register', [LoginController::class, 'register']);
